@@ -26,7 +26,7 @@ RUN         crontab /etc/oc-cron.conf
 ADD         extensions.sh extensions.conf /var/www/owncloud/apps/
 RUN         chmod a+x /var/www/owncloud/apps/extensions.sh ; \
             /var/www/owncloud/apps/extensions.sh /var/www/owncloud/apps/extensions.conf /var/www/owncloud/apps ; \
-            rm /var/www/owncloud/apps/extensions.sh /var/www/owncloud/apps/extensions.conf \
+            rm /var/www/owncloud/apps/extensions.sh /var/www/owncloud/apps/extensions.conf ; \
             chown -R www-data:www-data /var/www/owncloud
 
 EXPOSE      80
